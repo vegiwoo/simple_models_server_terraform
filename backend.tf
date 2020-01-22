@@ -9,10 +9,6 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
     name = "LockID"
     type = "S"
   }
-
-  # tags {
-  #   name = "DynamoDB Terraform State Lock Table"
-  # }
 }
 
 // Backend specification
