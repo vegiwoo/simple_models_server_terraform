@@ -1,5 +1,5 @@
 # Simple models terraform (IaaS for server side)
-Описание конфигурации инфрастуктуры серверной части как кода с использованием инструмента Terraform для проекта h [Simple models (server side)](ttps://github.com/vegiwoo/simple_models_server)
+Описание конфигурации инфрастуктуры серверной части как кода с использованием инструмента Terraform для проекта [Simple models (server side)](ttps://github.com/vegiwoo/simple_models_server)
 
 ## Цели реализации:
 - применение начальных знаний по IaaS, получение практичеких навыков;
