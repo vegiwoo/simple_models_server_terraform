@@ -1,14 +1,3 @@
-// Backend specification
-terraform {
-  backend "s3" {
-    bucket = "sms-backend-save"
-    encrypt = true
-    key    = "network/terraform.tfstate"
-    region = "eu-central-1"
-    dynamodb_table = "terraform-state-lock-dynamo"
-  }
-}
-
 // DynamoDB Terraform State Lock Table
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
   name = "terraform-state-lock-dynamo"
@@ -21,7 +10,18 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
     type = "S"
   }
 
-  tags {
-    Name = "DynamoDB Terraform State Lock Table"
+  # tags {
+  #   name = "DynamoDB Terraform State Lock Table"
+  # }
+}
+
+// Backend specification
+terraform {
+  backend "s3" {
+    bucket = "sms-backend-save"
+    encrypt = true
+    key    = "network/terraform.tfstate"
+    region = "eu-central-1"
+    dynamodb_table = "terraform-state-lock-dynamo"
   }
 }
